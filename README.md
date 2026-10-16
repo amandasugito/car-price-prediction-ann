@@ -1,50 +1,51 @@
-# 🚗 Car Price Prediction Using Artificial Neural Networks
+# 🚗 Car Price Prediction Using Artificial Neural Networks (ANN)
 
 ## 📌 Project Overview
-This project explores car price prediction using Artificial Neural Networks (ANN). It covers data inspection, data cleaning, feature engineering, exploratory data analysis (EDA), model development, and performance evaluation.
+This project focuses on predicting car selling prices using Artificial Neural Networks (ANN). The workflow includes data preprocessing, exploratory data analysis (EDA), feature engineering, model development, and performance evaluation.
 
-Two ANN models are compared: a baseline model using sigmoid activation and an improved model using ReLU activation.
+Two ANN models are implemented and compared: a baseline model using sigmoid activation and an improved model using ReLU activation.
 
 ## 🎯 Objectives
-- Analyze and clean the car dataset before modeling.
-- Handle missing values and inconsistent data types.
-- Prepare numerical and categorical features for ANN.
-- Build an ANN with three hidden layers using sigmoid activation.
-- Improve the model architecture using ReLU activation.
-- Compare model performance using R², RMSE, and MAE.
+- Understand the structure and characteristics of the car dataset.
+- Perform data cleaning and feature engineering.
+- Prepare numerical and categorical features for neural network modeling.
+- Build and train an ANN model using sigmoid activation.
+- Improve the model using ReLU activation.
+- Evaluate and compare model performance using R², RMSE, and MAE.
 
 ## 🧹 Data Preprocessing
-The preprocessing workflow includes:
+The notebook includes the following preprocessing steps:
 - Inspecting dataset structure, descriptive statistics, and missing values.
-- Removing the row with a missing `selling_price`.
+- Removing a row with a missing `selling_price`.
 - Converting `mileage` into a numerical format.
-- Extracting torque values and RPM information from the `torque` column.
+- Extracting torque and RPM information from the `torque` column.
 - Encoding categorical features using Label Encoding.
 - Standardizing input features and the target variable.
 
 ## 📊 Exploratory Data Analysis
-The notebook explores the dataset through:
+The dataset is explored using:
 - Descriptive statistics.
 - Selling price distribution.
 - Correlation heatmap.
 - Torque versus selling price scatterplot.
 
 ## 🧠 Model Development
+
 ### Baseline Model — Sigmoid
-- Three hidden layers: 512, 256, and 128 neurons.
+- Three hidden layers with 512, 256, and 128 neurons.
 - Sigmoid activation in the hidden layers.
 - Batch Normalization and Dropout.
 - Adam optimizer with a learning rate of 0.001.
 - Mean Squared Error (MSE) loss.
-- Training for 20 epochs with a batch size of 32.
+- 20 training epochs with a batch size of 32.
 
 ### Improved Model — ReLU
-- Three hidden layers: 512, 256, and 128 neurons.
+- Three hidden layers with 512, 256, and 128 neurons.
 - ReLU activation in the hidden layers.
 - Batch Normalization and Dropout.
 - Adam optimizer with a learning rate of 0.0005.
 - Mean Squared Error (MSE) loss.
-- Training for 20 epochs with a batch size of 24.
+- 20 training epochs with a batch size of 24.
 
 ## 📈 Model Evaluation
 The notebook reports the following test-set results:
@@ -55,13 +56,13 @@ The notebook reports the following test-set results:
 | RMSE | 3567.86 | 3233.57 |
 | MAE | 1851.19 | 1779.18 |
 
-Based on the reported metrics, the ReLU model performs better across all three evaluation metrics, with a higher R² and lower RMSE and MAE.
+Based on the reported results, the ReLU model performs better across all three metrics, with a higher R² and lower RMSE and MAE.
 
 ## 📂 Project Files
-- `car_price_prediction.ipynb` — notebook containing the analysis and ANN models.
+- `car_price_prediction.ipynb` — notebook containing the analysis, preprocessing, model training, and evaluation.
 - `2B.parquet` — dataset used in the notebook.
 
-## 🛠️ Tools & Libraries
+## 🛠️ Tools & Technologies
 - Python
 - Pandas and NumPy
 - Matplotlib and Seaborn
@@ -70,8 +71,14 @@ Based on the reported metrics, the ReLU model performs better across all three e
 - Jupyter Notebook
 - Parquet
 
-## 👤 Project Context
-An academic Deep Learning assignment covering dataset analysis, ANN implementation, model improvement, and evaluation.
+## 👤 Author
+**Amanda Sugito**
+
+Deep Learning academic project at BINUS University.
+
+## 🔗 Connect with Me
+- LinkedIn: Amanda Sugito | www.linkedin.com/in/amanda-sugito
+- GitHub: amandasugito | https://github.com/amandasugito
 
 ## ⚠️ Disclaimer
-This project is for educational purposes. The reported evaluation metrics are based on the results recorded in the notebook.
+This project was developed for educational purposes. The reported model evaluation metrics reflect the results recorded in the notebook.
